@@ -5,7 +5,7 @@ const AWS = require("aws-sdk");
 // Loading Examples
 const crudAndSimpleIngestionExample = require("./crud-and-simple-ingestion-example");
 const csvIngestExample = require("./csv-ingestion");
-// const queryExample = require("./query-example");
+const queryExample = require("./query-example");
 
 var argv = require('minimist')(process.argv.slice(2));
 
@@ -56,10 +56,11 @@ async function callServices() {
     if (csvFilePath != null) {
         await csvIngestExample.processCSV(csvFilePath);
     }
-    // await queryExample.runAllQueries();
+
+    // await queryExample.getAllRows("SELECT * FROM" ,null);
 
     // Try a query with multiple pages
-    // await queryExample.tryQueryWithMultiplePages(20000);
+    await queryExample.tryQueryWithMultiplePages(100);
 
     //Try cancelling a query
     //This could fail if there is no data in the table, and the example query has finished before it was cancelled.
