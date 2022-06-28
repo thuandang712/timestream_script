@@ -11,10 +11,12 @@ Script to generate random data set and ingest into Amazon TimeStream
     ```shell
     npm install
     ```
- 1. Run the data generator 
+ 1. Run the data generator. This will create the file 'out.csv'
     ```shell
     node generateData.mjs
     ```
+ 1. Delete the first line in out.csv file
+
  1. Ingest sample data into Amazon TimeStream by adding --csvFilePath flag
     ```shell
     node main.js --csvFilePath=./out.csv
