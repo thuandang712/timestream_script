@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
+    "aws-sdk": "^2.1161.0",
+    "csv-batch": "^2.0.5",
+    "csv-writer": "^1.6.0",
+    "https": "^1.0.0",
+    "minimist": "^1.2.6"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
